@@ -1,0 +1,173 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="598,1766" sap2010:WorkflowViewState.IdRef="Sequence_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="68">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Security</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="608,1701" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="demo" />
+      <Variable x:TypeArguments="x:Int32" Name="i">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" Value="2" />
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Mobile Medical Unit- MMSSY" sap:VirtualizedContainerService.HintSize="566,1609" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="56cecbbe-1208-4a56-aa15-4cbfdba9833a" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="532,1393" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[demo]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Diagnosis' ReferenceIdx='0' Name='Diagnosis'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Mark as Communicable Disease' ReferenceIdx='1' Name='Mark as Communicable Disease'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Mark as Infectious Disease' ReferenceIdx='2' Name='Mark as Infectious Disease'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Action' ReferenceIdx='3' Name='Action'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Recommended Diagnosis' ReferenceIdx='4' Name='Recommended Diagnosis'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Remarks' ReferenceIdx='5' Name='Remarks'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Diagnosis' attr='text' /&gt;&lt;column name='Mark as Communicable Disease' attr='text' /&gt;&lt;column name='Mark as Infectious Disease' attr='text' /&gt;&lt;column name='Action' attr='text' /&gt;&lt;column name='Recommended Diagnosis' attr='text' /&gt;&lt;column name='Remarks' attr='text' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="490,156" sap2010:WorkflowViewState.IdRef="NExtractData_1" MaximumResults="0" ScopeIdentifier="56cecbbe-1208-4a56-aa15-4cbfdba9833a" Version="V1">
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="294, 265, 1218, 154" FriendlyName="'Diagnosis Mark'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="520dff99-c210-4dbc-bdd7-c91dfc901a09" InformativeScreenshot="2080fd2b20c3051b1745843400a489af.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Mobile Medical Unit- MMSSY' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <If Condition="[demo.RowCount&gt;0]" sap:VirtualizedContainerService.HintSize="490,1103" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="454,915" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="412,84" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Hello&quot;]" />
+                  <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="412,697" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                    <ui:InterruptibleWhile.Body>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,532" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[i]" />
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Remarks'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="56cecbbe-1208-4a56-aa15-4cbfdba9833a" Text="Checked" Version="V1">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="http://103.133.215.182:8080/MMUWeb/treatmentAudit/getOpdPatientMainData?visitId=249006&amp;visitStatus=com" DesignTimeRectangle="1103, 322, 200, 50" ElementType="InputBox" FriendlyName="'TEXTAREA'" FullSelectorArgument="[&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='&quot;+i.ToString+&quot;' tag='TEXTAREA' /&gt;&quot;]" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TEXTAREA' class='form-control width200' aaname='' /&gt;" Guid="ade3c2c0-fa39-4ff9-89d6-ed564893b6d2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMwAAAA2CAYAAACLK3aNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFgSURBVHhe7dexSsRAGIVRn3YfVyzEQrGwsBLBxsUmjFzZxKy6694658BPmGTaj5lcDeBigoHCUTDv+4/x+PQ8bu4exvXtvTGbnTSQFtLE2hJMPmTTy+vbmKbp8Ba2KQ2khTSxjmYJJjVlA/AtTaSN2RJMSnKywLE0kTZmSzC5twG/rdsQDPxDMFAQDBQEAwXBQEEwUBAMFAQDBcFAQTBQEAwUBAMFwUBBMFAQDBQEAwXBQEEwUBAMFAQDBcFAQTBQEAwUBAMFwUBBMFAQDBQEAwXBQEEwUBAMFAQDBcFAQTBQEAwUBAMX2O12X0/BwD/mWEIwcMY6lhAMnPAzlhAM/OFnLP5h4IRTscSfwdzcPYxpmg4r2I5zsaSJtDFbgnl8eh4vr2+HFWzDuVgiTaSN2RLM+/7jq6RscNKwdWkgLaSJtDFbgol8SE3ZlHubMVudNJAW1rHEUTDAeYKBi43xCQEEcTdZiCHqAAAAAElFTkSuQmCC" InformativeScreenshot="dffc4bd57e0794dd39d25810070a524e.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Mobile Medical Unit- MMSSY' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                  <uix:Target DesignTimeRectangle="1093, 239, 217, 64" ElementType="Text" FriendlyName="'Remarks'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Remarks' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Remarks' type='' tag='TH' class='' check:innerText='Remarks' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAN0AAABECAYAAAAFrTCRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJiSURBVHhe7dg9TtxAAIbhvRMt4hLbUlJwAio4AopoqOEEVByAi6RIkWtM/DdmbK0Cyy7fJtIz0kPWP2u7mJeJ2RTDMKJj8/PX7wJkDNE9vb6VXr+jfgaOT3QQJjoIEx2EiQ7CRAdhooMw0UGY6CBMdBAmOggTHYSJDsJEB2GigzDRQZjoIEx0ECY6CBMdhIkOwkQHYaKDMNFBmOggTHQQtn90z3flbLMpm7Xzu/Kw6/yE6ZnObl52H4d/yJejW0zwU0960fEfOU50r49l2+3bXD4utyfb++m8+6tx+2a8xnC8+87tZT33olw/12u+Nft7V+V22P9Srs+77fOrsu3/7b/zo32meu96/uo6p1yRofMNK12NYpzcDzcXYxh9TFN0Nc4awyKWGkV/bv08XX/83nT9NtDm/uM1m2M19D78nb8wIOvL0c0rx2SeyOuJPW0Pk74NoDu2CHIVa73fYpVqo2vPWz3TvLL2aujr/XAiB650ddVpJnQzyVvD+XtENx7rtofQ2v++fhzdMtz3Z6zExykdGN379vwOtT7e+nR067A+GV13vMa6K6w55OZ9D9IOj66zfDdbRrEIa4+VbrzmGMccywfRjfdfvhv+7R71+SHpKNG9/8WwTu66PZpXnT2im1evwUU5m499FF23vbrP4r1wvh+cxv7RAQcRHYSJDsJEB2GigzDRQZjoIEx0ECY6CBMdhIkOwkQHYaKDMNFBmOggTHQQJjoIEx2EiQ7CRAdhooMw0UGY6CBMdBAmOggTHYSJDsLm6PoPQIboIGyIbvjZjbrDMIzvGaIzjPAYGyvlD+7L3KHlf41ZAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                                  <uix:Target DesignTimeRectangle="678, 239, 415, 64" ElementType="Text" FriendlyName="'Recommended Diagnosis'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Recommended Diagnosis' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Recommended Diagnosis' type='' tag='TH' class='' check:innerText='Recommended Diagnosis' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAaMAAABECAYAAAAso1p6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQOSURBVHhe7do9btw4GAbguZNbw5dw69JFTjBVfIQUaVxvTpBqD7AXSZFir6G1hqJEcjj0+C+f134IPIA1IsWfAb53BHg3aZqmaVpw2/36/e8EAJF2f/39zzSbL/LfAPAn5OwRRgCEEUYAhBNGAIQTRgCEE0YAhBNGAIQTRgCEE0YAhBNGAIQTRgCEE0YAhBNGAIQTRgCEE0YAhBNGAIQTRgCEE0YAhBNGAIQTRgCEE0YAhBNGAIQTRgCEE0YAhBNGAIQTRgCEe3oY/bibLna7ade6vJu+9/p/eD+nL5fP2f9o3P103Tnji/3Prc+328Nn19/Kce/D15t5vbfT1849gJ5nh1FVGHuffRpvGEY399tnS/h8zjMGPrrXCaOj4ln/sq9+vTdvVmfdy28B++L+w1zpF/jsavryI/X9vr9K1/s0Znaxv0+F/3Bd/mI/sc51j3fb/TIYynGXt9N1EyppDfl+GTbjcUfPr+Zs3jiaN6NqzuI8tnHp8+ub5Xzm+4/us31u/bazPfdBsY/2zehUP4DsDd6M6l/8azgcimMqsnlsVbSa51bjlsKbC2UubqnvUrir+Zq1PFwfivYyR3rOYJ25X3cPef5+3zok6lAZjqv0w6h3Jtu+cvGvzyP3q8/jvH3W182b3NH8J77XQT+A7NlhNBeY0lpg2oKzXB+K0aEwbcWu1BbCqiCXBe2o7yj8msJYPnO0zrzHHAbV/G1Q1PPX8y3Xh3vjcemzrO2bVHtrzmS7P8+/PbcKwPYZw3121lfeX/7e+m96YdTrB5C98M1oKVhloSmKT2nu3wZFqS3ibx5Gg3UeBVU1/yhUtvOozfO/YRjlvZRrWJ7bnmsvjM7bZ3v/eK/5+6nnPN0PIHthGG3Xa/Fp75eqYlY7Dqrj4MjjXiWMRus8p0ivITIu/pvxuG7fJoyqZxdr6hb/aj3beZwfRp31nfj+0jO3NZw6g7ZfeQ/43F4eRg9S8cmfjcKhLrKjwljde4swGo0bFummwC9916Jd9a33OxxX6YTRYE29s2rXk8Ytzz1zn+efc32vPPNRv3VvwKf3KmF0VOTW6yQXt3L84/fysx48u0iOwqi4XqxreaRIr3PO457033TjcZt6XVl15tWayv5X08Vhju3tI51Bunfd/W+6U/sc7aV8bnp2/8xP9wPInh5G/L80AdMGBcB7IIw+vOJtbFG++QC8B8IIgHDCCIBwwgiAcMIIgHDCCIBwwgiAcMIIgHDCCIBwwgiAcMIIgHDCCIBwwgiAcMIIgHDCCIBwwgiAcMIIgHDCCIBwwgiAcMIIgHDCCIBwwgiAcMIIgHDCCIBwwgiAcMIIgHBrGM1/AEAkYQRAuN20tPlC0zRN0/5ky9kjjDRN07SwlrJnmv4D4Ba5DY84ll0AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Int32">[i]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Int32">[i+1]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </ui:InterruptibleWhile.Body>
+                    <ui:InterruptibleWhile.Condition>
+                      <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="i&lt;=demo.RowCount+1" />
+                    </ui:InterruptibleWhile.Condition>
+                  </ui:InterruptibleWhile>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="b3117e641a5dceea869dee6c3e82f704.png" Selector="&lt;html app='chrome.exe' title='Mobile Medical Unit- MMSSY' /&gt;" Url="http://103.133.215.182:8080/MMUWeb/treatmentAudit/getOpdPatientMainData?visitId=249006&amp;visitStatus=com" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
