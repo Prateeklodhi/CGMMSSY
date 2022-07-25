@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1240,12253" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1240,13139" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="45">
       <x:String>System.Activities</x:String>
@@ -49,7 +49,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="35">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -84,10 +84,9 @@
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="main sequence" sap:VirtualizedContainerService.HintSize="1186,12188" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="main sequence" sap:VirtualizedContainerService.HintSize="1186,13074" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="finalComment" />
       <Variable x:TypeArguments="ui:UiElement" Name="Browser" />
@@ -97,14 +96,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="1144,132" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="Chorme" />
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="SingleWindow" CloseMode="Never" DisplayName="Use Browser Chrome: MMU" sap:VirtualizedContainerService.HintSize="1144,11924" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OutUiElement="[Browser]" ScopeGuid="bb44b033-9215-4434-93f8-7e225b15dc89" Version="V2" WindowResize="Maximize">
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="1144,132" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="Chrome" />
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="SingleWindow" CloseMode="Never" DisplayName="Use Browser Chrome: MMU" sap:VirtualizedContainerService.HintSize="1144,12810" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OutUiElement="[Browser]" ScopeGuid="bb44b033-9215-4434-93f8-7e225b15dc89" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1110,11708" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1110,12594" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="Text" />
               <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="Items" />
@@ -228,13 +227,13 @@
                 </ui:Target>
               </ui:FindChildren.Target>
             </ui:FindChildren>
-            <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1068,9588" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Items]">
+            <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1068,10474" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Items]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="ui:UiElement">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:UiElement" Name="item" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1032,9463" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1032,10349" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="text" />
                       <Variable x:TypeArguments="sd:DataTable" Name="dt_patient" />
@@ -260,9 +259,9 @@
                       </uix:NGetAttribute.Target>
                     </uix:NGetAttribute>
                     <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="990,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[text]" />
-                    <If Condition="[text &lt;&gt; &quot;Select&quot;]" sap:VirtualizedContainerService.HintSize="990,9042" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If Condition="[text &lt;&gt; &quot;Select&quot;]" sap:VirtualizedContainerService.HintSize="990,9928" sap2010:WorkflowViewState.IdRef="If_1">
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="954,8854" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                        <Sequence sap:VirtualizedContainerService.HintSize="954,9740" sap2010:WorkflowViewState.IdRef="Sequence_4">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:Int32" Name="html" />
                           </Sequence.Variables>
@@ -282,7 +281,7 @@
                               </uix:TargetAnchorable>
                             </uix:NTypeInto.Target>
                           </uix:NTypeInto>
-                          <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Prescription Audit'" sap:VirtualizedContainerService.HintSize="912,8504" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="bb44b033-9215-4434-93f8-7e225b15dc89" Version="V1">
+                          <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Prescription Audit'" sap:VirtualizedContainerService.HintSize="912,9390" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="bb44b033-9215-4434-93f8-7e225b15dc89" Version="V1">
                             <uix:NCheckState.IfExists>
                               <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="250,116" sap2010:WorkflowViewState.IdRef="Sequence_6">
                                 <sap:WorkflowViewStateService.ViewState>
@@ -294,7 +293,7 @@
                               </Sequence>
                             </uix:NCheckState.IfExists>
                             <uix:NCheckState.IfNotExists>
-                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="608,8288" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="608,9174" sap2010:WorkflowViewState.IdRef="Sequence_7">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -332,13 +331,13 @@
                                     </Sequence>
                                   </ui:CommentOut.Body>
                                 </ui:CommentOut>
-                                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_patient]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="566,7382" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_patient]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="566,8268" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                                   <ui:ForEachRow.Body>
                                     <ActivityAction x:TypeArguments="sd:DataRow">
                                       <ActivityAction.Argument>
                                         <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                                       </ActivityAction.Argument>
-                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="532,7266" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="532,8152" sap2010:WorkflowViewState.IdRef="Sequence_8">
                                         <Sequence.Variables>
                                           <Variable x:TypeArguments="x:Double" Name="height" />
                                           <Variable x:TypeArguments="x:Double" Name="weight" />
@@ -352,6 +351,7 @@
                                           <Variable x:TypeArguments="sd:DataTable" Name="demo" />
                                           <Variable x:TypeArguments="x:Int32" Name="i" />
                                           <Variable x:TypeArguments="x:String" Name="diagnosis" />
+                                          <Variable x:TypeArguments="x:String" Name="SignSymtoms" />
                                         </Sequence.Variables>
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -495,6 +495,36 @@
                                             <OutArgument x:TypeArguments="x:String">[clinicalExamin]</OutArgument>
                                           </uix:NGetText.Text>
                                         </uix:NGetText>
+                                        <uix:NGetText DisplayName="sign and sysmtoms" sap:VirtualizedContainerService.HintSize="490,156" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="bb44b033-9215-4434-93f8-7e225b15dc89" Version="V1">
+                                          <uix:NGetText.Target>
+                                            <uix:TargetAnchorable BrowserURL="http://103.133.215.182:8080/MMUWeb/treatmentAudit/getOpdPatientMainData?visitId=242401&amp;visitStatus=com" DesignTimeRectangle="762, 501, 204, 88" FriendlyName="'Routine checkup[407]'" FullSelectorArgument="&lt;webctrl id='patientSympotnsId' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='patientSympotnsId' tag='DIV' type='' class='multiDiv' aaname='' /&gt;" Guid="f0131981-5db5-4b36-8424-b66004d6fd09" InformativeScreenshot="ef2c66d3f81811ed2c1a66b93dd6cd83.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Mobile Medical Unit- MMSSY' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+                                          </uix:NGetText.Target>
+                                          <uix:NGetText.Text>
+                                            <OutArgument x:TypeArguments="x:String">[SignSymtoms]</OutArgument>
+                                          </uix:NGetText.Text>
+                                        </uix:NGetText>
+                                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="490,61" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="[SignSymtoms]" />
+                                        <If Condition="[SignSymtoms.Contains(&quot;Routine checkup&quot;)]" sap:VirtualizedContainerService.HintSize="490,343" sap2010:WorkflowViewState.IdRef="If_5">
+                                          <If.Then>
+                                            <Sequence sap:VirtualizedContainerService.HintSize="272,155" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="Yes Its A Success" />
+                                            </Sequence>
+                                          </If.Then>
+                                          <If.Else>
+                                            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </Sequence>
+                                          </If.Else>
+                                        </If>
                                         <If Condition="[clinicalExamin.Equals(&quot;&quot;)]" sap:VirtualizedContainerService.HintSize="490,343" sap2010:WorkflowViewState.IdRef="If_2">
                                           <If.Then>
                                             <Sequence sap:VirtualizedContainerService.HintSize="304,155" sap2010:WorkflowViewState.IdRef="Sequence_18">
@@ -523,7 +553,7 @@
                                             </Sequence>
                                           </If.Else>
                                         </If>
-                                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="490,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="490,192" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                                           <ui:CommentOut.Body>
                                             <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_9">
                                               <sap:WorkflowViewStateService.ViewState>
@@ -536,7 +566,7 @@
                                           </ui:CommentOut.Body>
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
@@ -861,28 +891,56 @@
                                             <uix:TargetAnchorable BrowserURL="http://103.133.215.182:8080/MMUWeb/treatmentAudit/getOpdPatientMainData?visitId=277319&amp;visitStatus=com" DesignTimeRectangle="284, 484, 1037, 103" FriendlyName="'Remarks Final'" FullSelectorArgument="&lt;webctrl id='newpost11' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='newpost11' tag='DIV' type='' class='hisDivHide p-10' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;    &amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;    ' check:innerText='Remarks&amp;#xD;&amp;#xA;Final Remarks&amp;#xD;&amp;#xA; Observation&amp;#xD;&amp;#xA; New Suggestion' /&gt;" Guid="e01c4ad9-1f4d-4ab5-89f3-9d5d670aedd3" ImageBase64="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" InformativeScreenshot="5cf865d043ba42a36afa0e17801e613e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Mobile Medical Unit- MMSSY' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
                                           </uix:NMouseScroll.Target>
                                         </uix:NMouseScroll>
-                                        <uix:NClick ClickType="Single" DisplayName="Click 'Submit'" sap:VirtualizedContainerService.HintSize="490,156" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bb44b033-9215-4434-93f8-7e225b15dc89" Version="V1">
-                                          <uix:NClick.Target>
-                                            <uix:TargetAnchorable BrowserURL="http://103.133.215.182:8080/MMUWeb/treatmentAudit/getOpdPatientMainData?visitId=278078&amp;visitStatus=com" DesignTimeRectangle="626, 607, 75, 28" ElementType="Button" FriendlyName="'Submit'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='btn btn-primary m-r-10 notDisable' aaname='Submit' check:text='Submit' /&gt;" Guid="3a095cf8-5eaf-4db5-be3a-137387d81b59" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAgCAYAAABTliUJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG2SURBVGhD7ZlBSsRAEEU9pxvBu3gFwSuIegXd6sqFLty4ElEQQQVlFCl5ZH6saVqnUxPBCfXhk6Sruqf6TWUykA1LhZXwVtACvL0zs60Ds839dGm4wMerh0dg+7A+Md0ZPh5gDy87rs1wknp4tcR03VLCC1hKeAFLCS9gKeEFLCW8gKVR4R1fzxeb6+PT7OiynlvzxZ3Z46vZzkk9PsS7p2Zv711NrMe6nNdyh1oaDR6FUSxF+zHUWvSY8Lz/Pbybp86/jdOFAPbd6OPAe551lvyGybt66EAgdTbjEmuQq847v/3OR4qvYmk0eBS17DZtgYe0QfJYUwDJ858haMonT92/Vrct9h2ABEVugVfetj7uz7GHxTVHupb11w6erGIlFd0Cz8PRmIDW4HnYk4Dn7Tef8Cr2hZYxxoiR0wLPwyjj/hxPAh5m4+UDQ0UT41ob0jW5zPHwkDbJsXxATBIeprhSZcE+hw3x18PDu3/pxiU/PwqPmL4YPz9q6c9/86ZoKeEFLCW8gKWEF7CU8AKWEl7AUg8vXz22ufrqMV96L/ePL70RgezAuuHiwaEFeKlhSnhhmX0BBJQZ3gxC1QAAAAAASUVORK5CYII=" InformativeScreenshot="0ef515109ca0159b5188cb28c93182ab.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Mobile Medical Unit- MMSSY' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
-                                              <uix:TargetAnchorable.Anchors>
-                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                  <uix:Target DesignTimeRectangle="714, 607, 75, 28" ElementType="Button" FriendlyName="'Back'" FullSelectorArgument="&lt;webctrl parentid='wrapper' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='wrapper' tag='BUTTON' type='button' class='btn btn-primary notDisable' aaname='Back' check:innerText='Back' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAgCAYAAABTliUJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGnSURBVGhD7ZlBbsIwEEXZ9nQ9DLfooifgDL0BnKCrqGJdNqgbYIFUZYE0ZRx/Z2wccFwnltp50heQOAE/zThIXpCSjcr7BZ68969ven77pKfXD1q8NBob9sFe2I/EyeMTKu1+2I8U6OSx2dgFGj/sCTh5WnVpYU/AyYsN1MQDVF5GgMrLCFB5GQEqLyNgBnl7Wrf2SwK2TWz82BxpW+xeaQGzybuZXMNGL7TeBMdH5z/KM5OW8m4r9LTbB+MFh6N33N1/c6aTd758QN3KcxO04sSEl7vL9QDkdud7mfKzkGfFTV2FoOqaR+2ZltFrrjEirDzT4i2tYuOcvO7Vr9ZpAupV3kCVrA7d7+no5JkqHBQt27nEGvo4oOKaZ0XZVnXSIElUXoo8rrj748oFVJfXr1tB1Yxu2/791K0LKrcthEkB/efhB4as2uDaYn+BhgOqPjA8oWbSgCcfVhGEWlx7huKt2AnbF8wg7+8FqLyMAJWXEaDyMgJUXkaAk6cbQGmJbgDp1mNaoluPuun9OOwnuunN8Ak2qxL9sA/2IsUxnjxlHCovG6If/vzkC6/8XYUAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
-                                                </scg:List>
-                                              </uix:TargetAnchorable.Anchors>
-                                            </uix:TargetAnchorable>
-                                          </uix:NClick.Target>
-                                        </uix:NClick>
-                                        <uix:NClick ClickType="Single" DisplayName="Click 'Back to List'" sap:VirtualizedContainerService.HintSize="490,156" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bb44b033-9215-4434-93f8-7e225b15dc89" Version="V1">
-                                          <uix:NClick.Target>
-                                            <uix:TargetAnchorable BrowserURL="http://103.133.215.182:8080/MMUWeb/treatmentAudit/treatmentSubmit?visitId=278158" DesignTimeRectangle="1240, 280, 98, 28" ElementType="Button" FriendlyName="'Back to List'" FullSelectorArgument="&lt;webctrl id='clicked' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clicked' tag='BUTTON' type='button' class='btn btn-primary opd_submit_btn' aaname='Back to List' check:innerText='Back to List' /&gt;" Guid="84e60c4c-875b-4007-a950-6a7e58de64ce" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGYAAAAgCAYAAADg3g0TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJDSURBVGhD7Zo9bsMwDIW79nQ9TG7RoSfIGXqD5ASdgiJzswRdkgwBigwBWJM2ZZKWHeWnNgvwAQ+ILNmS3icpi54g5FIBxqkUmI/vH3h5/4Lnt094el2FRzBmjZlj9lIJDFYEkOmM2Us4CQxSy70QHs/IgJXAxG6Z3siAlcDkGobHNyvAODMrwDgzK8A4MyvAODPrTjB7WDfva51hscy1v9LLIxyKv4Vjub3f2eYMsNtn63ie61WuTnoLi1NJu36zHgCmGwZNEk4wF89ushswpXYOpg5UgKGylHnH1B82W/FctF1Vs5b1yfWKZqVgmva1hqFds2Pqhcfi79ZQWN0xlpn1ZztGhytXUTOB0xFmVNaTVmUJhkIeCteMxba/8H4xGPqOWHSq7GrH9GjgWKAQGjDyd6ctg1lZuDlLMHVAdtXOd/3juhmMsvejLLs6DcQGxlBY+oi79J8lxyKCFG2Gwi8GY44s3Yd3MGrFtkB4BctdUgIGJzrYjjwWmNY0JhL3+0/A0ABx95ijSoKRv/U3Ksv/GAGp044sxyIXRtvmIUdZp0725R2MPIftmUxlfMQw7KTFRCWYqo7C6z3SzFjscWrLxsVg7HzUGF2ByUkH0G75SgjEhtTshiQOyIDhifcFyP2kncKLgNQPBV1Dz4j60otHzaeSBJG+0wt52Kw7wYQfbVaAcWZWgHFmVoBxZlaAcWZWAhOXMaZ39jJGXF+a3tnrS3Hhb1pj9tkLfyisQGoBaDxj1pi5hIJSYEJ+FGBcCuAXoA0M9x890HEAAAAASUVORK5CYII=" InformativeScreenshot="47ac722752b461c07e270775d2e32e70.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Mobile Medical Unit- MMSSY' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
-                                              <uix:TargetAnchorable.Anchors>
-                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                  <uix:Target DesignTimeRectangle="284, 247, 238, 14" ElementType="Text" FriendlyName="'Prescription audit'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p&amp;gt;span' isleaf='1' parentid='wrapper' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' parentid='wrapper' tag='SPAN' class='submitMsg' aaname='Prescription audit submitted successfully' check:innerText='Prescription audit submitted successfully' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPIAAAASCAYAAABhLIMmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARASURBVHhe7VhbbuMwDOwZc6L9yAH6vZ8BcoIFcoT89RhFj+HqQUqcsUg7faBNVgMIqCyKHA5JN/DTMjExcfeYgzwx8QCYgzwx8QCYgzwx8QAwg3xdjn+elidah8ubnP8E3pbzc+LxfE5/7cDreTmcrv3vH+fvQbRWri/HovXxpW4hjy/BjTq6GPhJ3EFj3u8C6fFIkD4s87Slv+2DG/t3PchGzOspEzgs51d58KtxT80Qcf2OPL5qkAncbB9+eT7uIL9dDviSjvBdgwzO9O9TeuNmO2kKJbp644i9nkEi3pkmkmKUs9M/bEA+LzaZrzSqPsv2AyHqi8nYyPPm99J5uQIS92bH8WxRMuy9xB+0braDPKpFh6ddGF8HOcVt/vsLutYw7S9d18PlargcU3cUS1MP6Rddp7+0lxt7+oP1IICPxiWBNG556D8eT6sMuVuX/WeFedk7Lo+EYW9BjFqbajfSs9uXmLaelOdoVm8eZCgGBLD3kSCSr3bacHCmiTcO40T1XIVdx0+w3BNGHJot+UVbi8pHBa120gQUD7WRPLw8wXZQh4ZA113xtWElhvhRHetdtZW7WvfCB+OvYoYcbF4beliAz3Hdqn/NA3NULiOtQJuSE+YH/vbyIA2wR4kHxfP9xHln7P9pTQQzkJTsrSDZn5JUFBIqNmFFMEi0wHIm/pEQCVAk8YviOxwzxHfJz9PHcl1pFxVmzbUj0DWKzzrmJyZHzhfravmQH45Je7c/tvSwENucS7cXUD+sazquYbXrvBqcfGwNIx6Wi6LG6s9Rk6C/iYu9x7pmbH7sasQ4SSVB9i2ASa4sIctNA6DChIkW2AagZrB8V9yJB/n1OapG9QzsOEZQlBVXiE9nDLFtyxsq8PkTgxz0x5YehMqnr3GOcU4Wo0EoYG1laTyXxyBX5NT3GDvo72E9cz5jreKf1hYr8QNBAOJX75L4gNVZkGiB5Uz8ge86Nyg0+XWbILIbCi+2ctbjEx/wu+Y6htilVWJG8VnH/MRw53yxrpYP+eGYtHf7Y0sPD5LTrrrRmYVbX87HA/MwqL573rpXHh8eZNFIv1FxXp8aZBTL3idfrt2W+ONEdY8iUcywqSJ+xMkCfIqPZoc+azz1KXlofM1jhz6IiPee+GQLOvZ8fa1uG2Sf34YeFuCDuEE89TmuB+To9gbmF/Wm5YH6jXz0eyMeTU8bg7VM0Jr22nR8bpATlGhZSihDSeqyfulMk2SxWJR27nxdhkRDIdKyfCguFgZhfRyeR0WqZ/plveci+ublfrWu26hgka5+fNXRfrXuvjnfGl/Pg0HWfT4vz3iPnKA/Ij0I4COtrqnV6pByxjzcPssQzfVur7XhRXf28cir+9M73db413pwf2fbQf82zgOdzCDfAajhJyb+KwT9Pwd5YuLXw/56Gf9qua9BnpiYGGIO8sTEA2AO8sTE3WNZ3gFIIWC/LdJt2QAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
-                                                </scg:List>
-                                              </uix:TargetAnchorable.Anchors>
-                                            </uix:TargetAnchorable>
-                                          </uix:NClick.Target>
-                                        </uix:NClick>
+                                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="490,51" sap2010:WorkflowViewState.IdRef="CommentOut_10">
+                                          <ui:CommentOut.Body>
+                                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,248" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <uix:NClick ClickType="Single" DisplayName="Click 'Submit'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bb44b033-9215-4434-93f8-7e225b15dc89" Version="V1">
+                                                <uix:NClick.Target>
+                                                  <uix:TargetAnchorable BrowserURL="http://103.133.215.182:8080/MMUWeb/treatmentAudit/getOpdPatientMainData?visitId=278078&amp;visitStatus=com" DesignTimeRectangle="626, 607, 75, 28" ElementType="Button" FriendlyName="'Submit'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='btn btn-primary m-r-10 notDisable' aaname='Submit' check:text='Submit' /&gt;" Guid="3a095cf8-5eaf-4db5-be3a-137387d81b59" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAgCAYAAABTliUJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG2SURBVGhD7ZlBSsRAEEU9pxvBu3gFwSuIegXd6sqFLty4ElEQQQVlFCl5ZH6saVqnUxPBCfXhk6Sruqf6TWUykA1LhZXwVtACvL0zs60Ds839dGm4wMerh0dg+7A+Md0ZPh5gDy87rs1wknp4tcR03VLCC1hKeAFLCS9gKeEFLCW8gKVR4R1fzxeb6+PT7OiynlvzxZ3Z46vZzkk9PsS7p2Zv711NrMe6nNdyh1oaDR6FUSxF+zHUWvSY8Lz/Pbybp86/jdOFAPbd6OPAe551lvyGybt66EAgdTbjEmuQq847v/3OR4qvYmk0eBS17DZtgYe0QfJYUwDJ858haMonT92/Vrct9h2ABEVugVfetj7uz7GHxTVHupb11w6erGIlFd0Cz8PRmIDW4HnYk4Dn7Tef8Cr2hZYxxoiR0wLPwyjj/hxPAh5m4+UDQ0UT41ob0jW5zPHwkDbJsXxATBIeprhSZcE+hw3x18PDu3/pxiU/PwqPmL4YPz9q6c9/86ZoKeEFLCW8gKWEF7CU8AKWEl7AUg8vXz22ufrqMV96L/ePL70RgezAuuHiwaEFeKlhSnhhmX0BBJQZ3gxC1QAAAAAASUVORK5CYII=" InformativeScreenshot="0ef515109ca0159b5188cb28c93182ab.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Mobile Medical Unit- MMSSY' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                        <uix:Target DesignTimeRectangle="714, 607, 75, 28" ElementType="Button" FriendlyName="'Back'" FullSelectorArgument="&lt;webctrl parentid='wrapper' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='wrapper' tag='BUTTON' type='button' class='btn btn-primary notDisable' aaname='Back' check:innerText='Back' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAgCAYAAABTliUJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGnSURBVGhD7ZlBbsIwEEXZ9nQ9DLfooifgDL0BnKCrqGJdNqgbYIFUZYE0ZRx/Z2wccFwnltp50heQOAE/zThIXpCSjcr7BZ68969ven77pKfXD1q8NBob9sFe2I/EyeMTKu1+2I8U6OSx2dgFGj/sCTh5WnVpYU/AyYsN1MQDVF5GgMrLCFB5GQEqLyNgBnl7Wrf2SwK2TWz82BxpW+xeaQGzybuZXMNGL7TeBMdH5z/KM5OW8m4r9LTbB+MFh6N33N1/c6aTd758QN3KcxO04sSEl7vL9QDkdud7mfKzkGfFTV2FoOqaR+2ZltFrrjEirDzT4i2tYuOcvO7Vr9ZpAupV3kCVrA7d7+no5JkqHBQt27nEGvo4oOKaZ0XZVnXSIElUXoo8rrj748oFVJfXr1tB1Yxu2/791K0LKrcthEkB/efhB4as2uDaYn+BhgOqPjA8oWbSgCcfVhGEWlx7huKt2AnbF8wg7+8FqLyMAJWXEaDyMgJUXkaAk6cbQGmJbgDp1mNaoluPuun9OOwnuunN8Ak2qxL9sA/2IsUxnjxlHCovG6If/vzkC6/8XYUAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NClick.Target>
+                                              </uix:NClick>
+                                            </Sequence>
+                                          </ui:CommentOut.Body>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </ui:CommentOut>
+                                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="490,326" sap2010:WorkflowViewState.IdRef="CommentOut_11">
+                                          <ui:CommentOut.Body>
+                                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,248" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <uix:NClick ClickType="Single" DisplayName="Click 'Back to List'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bb44b033-9215-4434-93f8-7e225b15dc89" Version="V1">
+                                                <uix:NClick.Target>
+                                                  <uix:TargetAnchorable BrowserURL="http://103.133.215.182:8080/MMUWeb/treatmentAudit/treatmentSubmit?visitId=278158" DesignTimeRectangle="1240, 280, 98, 28" ElementType="Button" FriendlyName="'Back to List'" FullSelectorArgument="&lt;webctrl id='clicked' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clicked' tag='BUTTON' type='button' class='btn btn-primary opd_submit_btn' aaname='Back to List' check:innerText='Back to List' /&gt;" Guid="84e60c4c-875b-4007-a950-6a7e58de64ce" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGYAAAAgCAYAAADg3g0TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJDSURBVGhD7Zo9bsMwDIW79nQ9TG7RoSfIGXqD5ASdgiJzswRdkgwBigwBWJM2ZZKWHeWnNgvwAQ+ILNmS3icpi54g5FIBxqkUmI/vH3h5/4Lnt094el2FRzBmjZlj9lIJDFYEkOmM2Us4CQxSy70QHs/IgJXAxG6Z3siAlcDkGobHNyvAODMrwDgzK8A4MyvAODPrTjB7WDfva51hscy1v9LLIxyKv4Vjub3f2eYMsNtn63ie61WuTnoLi1NJu36zHgCmGwZNEk4wF89ushswpXYOpg5UgKGylHnH1B82W/FctF1Vs5b1yfWKZqVgmva1hqFds2Pqhcfi79ZQWN0xlpn1ZztGhytXUTOB0xFmVNaTVmUJhkIeCteMxba/8H4xGPqOWHSq7GrH9GjgWKAQGjDyd6ctg1lZuDlLMHVAdtXOd/3juhmMsvejLLs6DcQGxlBY+oi79J8lxyKCFG2Gwi8GY44s3Yd3MGrFtkB4BctdUgIGJzrYjjwWmNY0JhL3+0/A0ABx95ijSoKRv/U3Ksv/GAGp044sxyIXRtvmIUdZp0725R2MPIftmUxlfMQw7KTFRCWYqo7C6z3SzFjscWrLxsVg7HzUGF2ByUkH0G75SgjEhtTshiQOyIDhifcFyP2kncKLgNQPBV1Dz4j60otHzaeSBJG+0wt52Kw7wYQfbVaAcWZWgHFmVoBxZlaAcWZWAhOXMaZ39jJGXF+a3tnrS3Hhb1pj9tkLfyisQGoBaDxj1pi5hIJSYEJ+FGBcCuAXoA0M9x890HEAAAAASUVORK5CYII=" InformativeScreenshot="47ac722752b461c07e270775d2e32e70.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Mobile Medical Unit- MMSSY' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                        <uix:Target DesignTimeRectangle="284, 247, 238, 14" ElementType="Text" FriendlyName="'Prescription audit'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p&amp;gt;span' isleaf='1' parentid='wrapper' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' parentid='wrapper' tag='SPAN' class='submitMsg' aaname='Prescription audit submitted successfully' check:innerText='Prescription audit submitted successfully' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPIAAAASCAYAAABhLIMmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARASURBVHhe7VhbbuMwDOwZc6L9yAH6vZ8BcoIFcoT89RhFj+HqQUqcsUg7faBNVgMIqCyKHA5JN/DTMjExcfeYgzwx8QCYgzwx8QCYgzwx8QAwg3xdjn+elidah8ubnP8E3pbzc+LxfE5/7cDreTmcrv3vH+fvQbRWri/HovXxpW4hjy/BjTq6GPhJ3EFj3u8C6fFIkD4s87Slv+2DG/t3PchGzOspEzgs51d58KtxT80Qcf2OPL5qkAncbB9+eT7uIL9dDviSjvBdgwzO9O9TeuNmO2kKJbp644i9nkEi3pkmkmKUs9M/bEA+LzaZrzSqPsv2AyHqi8nYyPPm99J5uQIS92bH8WxRMuy9xB+0braDPKpFh6ddGF8HOcVt/vsLutYw7S9d18PlargcU3cUS1MP6Rddp7+0lxt7+oP1IICPxiWBNG556D8eT6sMuVuX/WeFedk7Lo+EYW9BjFqbajfSs9uXmLaelOdoVm8eZCgGBLD3kSCSr3bacHCmiTcO40T1XIVdx0+w3BNGHJot+UVbi8pHBa120gQUD7WRPLw8wXZQh4ZA113xtWElhvhRHetdtZW7WvfCB+OvYoYcbF4beliAz3Hdqn/NA3NULiOtQJuSE+YH/vbyIA2wR4kHxfP9xHln7P9pTQQzkJTsrSDZn5JUFBIqNmFFMEi0wHIm/pEQCVAk8YviOxwzxHfJz9PHcl1pFxVmzbUj0DWKzzrmJyZHzhfravmQH45Je7c/tvSwENucS7cXUD+sazquYbXrvBqcfGwNIx6Wi6LG6s9Rk6C/iYu9x7pmbH7sasQ4SSVB9i2ASa4sIctNA6DChIkW2AagZrB8V9yJB/n1OapG9QzsOEZQlBVXiE9nDLFtyxsq8PkTgxz0x5YehMqnr3GOcU4Wo0EoYG1laTyXxyBX5NT3GDvo72E9cz5jreKf1hYr8QNBAOJX75L4gNVZkGiB5Uz8ge86Nyg0+XWbILIbCi+2ctbjEx/wu+Y6htilVWJG8VnH/MRw53yxrpYP+eGYtHf7Y0sPD5LTrrrRmYVbX87HA/MwqL573rpXHh8eZNFIv1FxXp8aZBTL3idfrt2W+ONEdY8iUcywqSJ+xMkCfIqPZoc+azz1KXlofM1jhz6IiPee+GQLOvZ8fa1uG2Sf34YeFuCDuEE89TmuB+To9gbmF/Wm5YH6jXz0eyMeTU8bg7VM0Jr22nR8bpATlGhZSihDSeqyfulMk2SxWJR27nxdhkRDIdKyfCguFgZhfRyeR0WqZ/plveci+ublfrWu26hgka5+fNXRfrXuvjnfGl/Pg0HWfT4vz3iPnKA/Ij0I4COtrqnV6pByxjzcPssQzfVur7XhRXf28cir+9M73db413pwf2fbQf82zgOdzCDfAajhJyb+KwT9Pwd5YuLXw/56Gf9qua9BnpiYGGIO8sTEA2AO8sTE3WNZ3gFIIWC/LdJt2QAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NClick.Target>
+                                              </uix:NClick>
+                                            </Sequence>
+                                          </ui:CommentOut.Body>
+                                        </ui:CommentOut>
                                       </Sequence>
                                     </ActivityAction>
                                   </ui:ForEachRow.Body>
