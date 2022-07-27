@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1263,15070" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1263,14937" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="47">
       <x:String>System.Activities</x:String>
@@ -89,7 +89,7 @@
       <AssemblyReference>UiPath.OrchestratorClient</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="main sequence" sap:VirtualizedContainerService.HintSize="1273,15005" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="main sequence" sap:VirtualizedContainerService.HintSize="1273,14872" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="finalComment" />
       <Variable x:TypeArguments="ui:UiElement" Name="Browser" />
@@ -109,13 +109,13 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="1231,134" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="Chrome" />
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="SingleWindow" CloseMode="Never" DisplayName="Use Browser Chrome: MMU" sap:VirtualizedContainerService.HintSize="1231,14739" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OutUiElement="[Browser]" ScopeGuid="bb44b033-9215-4434-93f8-7e225b15dc89" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="SingleWindow" CloseMode="Never" DisplayName="Use Browser Chrome: MMU" sap:VirtualizedContainerService.HintSize="1231,14606" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OutUiElement="[Browser]" ScopeGuid="bb44b033-9215-4434-93f8-7e225b15dc89" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1197,14522" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1197,14389" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="Items" />
               <Variable x:TypeArguments="sd:DataTable" Name="dt_comments" />
@@ -230,13 +230,13 @@
                 </ui:Target>
               </ui:FindChildren.Target>
             </ui:FindChildren>
-            <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1155,13083" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Items]">
+            <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1155,12950" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Items]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="ui:UiElement">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:UiElement" Name="item" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1119,12957" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1119,12824" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="sd:DataTable" Name="dt_patient" />
                       <Variable x:TypeArguments="x:String" Name="test" />
@@ -268,9 +268,9 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:LogMessage>
-                    <If Condition="[text &lt;&gt; &quot;Select&quot;]" sap:VirtualizedContainerService.HintSize="1077,12501" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If Condition="[text &lt;&gt; &quot;Select&quot;]" sap:VirtualizedContainerService.HintSize="1077,12368" sap2010:WorkflowViewState.IdRef="If_1">
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="1041,12310" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                        <Sequence sap:VirtualizedContainerService.HintSize="1041,12177" sap2010:WorkflowViewState.IdRef="Sequence_4">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:Int32" Name="html" />
                           </Sequence.Variables>
@@ -347,14 +347,14 @@
                           </uix:NSelectItem>
                           <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="999,52" sap2010:WorkflowViewState.IdRef="CommentOut_14">
                             <ui:CommentOut.Body>
-                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,310" sap2010:WorkflowViewState.IdRef="Sequence_75">
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,308" sap2010:WorkflowViewState.IdRef="Sequence_75">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'MMU'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,218" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="bb44b033-9215-4434-93f8-7e225b15dc89" Text="[text]" Version="V1">
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'MMU'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="bb44b033-9215-4434-93f8-7e225b15dc89" Text="[text]" Version="V1">
                                   <uix:NTypeInto.Target>
                                     <uix:TargetAnchorable BrowserURL="http://103.133.215.182:8080/MMUWeb/treatmentAudit/auditWaitingList" DesignTimeRectangle="398, 290, 137, 32" ElementType="DropDown" FriendlyName="'Select'" FullSelectorArgument="&lt;webctrl tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' type='' class='form-control' aaname='' /&gt;" Guid="4e312f1a-cb4a-4e6c-9444-87408795be45" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAI0AAAAkCAYAAAC0TbmDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJaSURBVHhe7ZyxTsMwEIZ5PTY2HoIFOpSpj1GpS7dKIHVsl74EylAxgBgYUFUhJIaCWCqTP3acsxM3ccEVov8nWYp9jpf7ctdWSk8UIZFQGhKNI83H55d6en5R2f2juls+cBz5gAfwAV5IrDQIYNPr27vabrdmlRwz8AA+wAspjpUGRmEDIT7wAn6UWGlgEysMaQJewI8SKw16GCEhpB+UhnSC0pBoKA2JhtKQaCgNiYbSkGiSS5ONztXpmRj9hVqZWDtLNczvGWZmujdrNev/xjkEJJWmEGa0NDONlmisuuWP0vxFEkoTSnh9fTUfiGo0ULO1CdT26uSHq5beb+OFsO49vbk9nORMbqZqs9mYWQXWJrdTM3NJKI1JVks7KoSRe7JxntyyEklp9Hky6W4l8+Nyrq9ZaVwgDB6ki6trRxxcYw0x7PFJKA3wnvx8uIlDXFYWDWTQyRbSQKbGymLud2TzoTRNFHJc9ou8lOJIYRCTMpUklkawXqieEccm11lzhy+N28Lk0NLUKpYDpQnhi9MmDDicNBbRNgpp6pWmwpNmR6ujNPsjxWkTBqSTZke7qD6LiPbTiNeedn3rYnv6EaU4bcKAhJVGJ6r29HvVRbcdmWwpkrw258mv8I4oooIZKjkpTRcgS5swIKE0Gv27jBz1auDvqZLrVyI9D5/lxYWw9jORlI7sRXJpyP+D0pBoKA2JhtKQaCgNiYbSkGgoDYmmURq+LEdCBF+W42u5JETwtVz+AQDxgQfwAV40/gEAQABGYRN6GMdxD3gAH6QwwJGGkC5QGhKJUt9iODvu0f4V9AAAAABJRU5ErkJggg==" InformativeScreenshot="f9cbb06a6749bfc3e10876224eca9039.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Mobile Medical Unit- MMSSY' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                                       <uix:TargetAnchorable.Anchors>
@@ -374,7 +374,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:CommentOut>
-                          <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Prescription Audit'" sap:VirtualizedContainerService.HintSize="999,11927" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="bb44b033-9215-4434-93f8-7e225b15dc89" Version="V1">
+                          <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Prescription Audit'" sap:VirtualizedContainerService.HintSize="999,11794" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="bb44b033-9215-4434-93f8-7e225b15dc89" Version="V1">
                             <uix:NCheckState.IfExists>
                               <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="250,116" sap2010:WorkflowViewState.IdRef="Sequence_6">
                                 <sap:WorkflowViewStateService.ViewState>
@@ -386,7 +386,7 @@
                               </Sequence>
                             </uix:NCheckState.IfExists>
                             <uix:NCheckState.IfNotExists>
-                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="695,11709" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="695,11576" sap2010:WorkflowViewState.IdRef="Sequence_7">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="x:Int32" Default="2" Name="demoindex" />
                                 </Sequence.Variables>
@@ -404,16 +404,15 @@
                                   </uix:NExtractData.Target>
                                 </uix:NExtractData>
                                 <ui:OutputDataTable DataTable="[dt_patient]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="653,80" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[test]" />
-                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="653,93" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[test]" />
                                 <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="653,52" sap2010:WorkflowViewState.IdRef="CommentOut_8">
                                   <ui:CommentOut.Body>
-                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,249" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,248" sap2010:WorkflowViewState.IdRef="Sequence_27">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <uix:NClick ClickType="Single" DisplayName="Click to first page" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bb44b033-9215-4434-93f8-7e225b15dc89" Version="V1">
+                                      <uix:NClick ClickType="Single" DisplayName="Click to first page" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bb44b033-9215-4434-93f8-7e225b15dc89" Version="V1">
                                         <uix:NClick.Target>
                                           <uix:TargetAnchorable BrowserURL="http://103.133.215.182:8080/MMUWeb/treatmentAudit/auditWaitingList" DesignTimeRectangle="1107, 324, 31, 15" ElementType="Button" FriendlyName="'f'" FullSelectorArgument="&lt;webctrl name='firstpage' tag='INPUT' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl name='firstpage' tag='INPUT' type='button' class='previous' aaname='f' check:text='f' /&gt;" Guid="89f0fc50-9fa1-4dfe-a9e3-d7d86fdd79e5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACMAAAATCAYAAAAao7T0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGqSURBVEhL3VVNSwJRFPXXln1B2aKgReUiyKCWRevAiqAP+yAqwz421SI1jECRCCnKpCC1ND3dgzPMm5mysTGSDtzFzJx597x7z7vP4wnEwGgF/E8xV1lgJAxMnwC5gvbSgmoVSOWA4T1g8hh4KmofNLgWUywDywmgbcUI3xYQvQMqklxHuQJE0kB3yOD1bQI3zxpB4ErMQx4YPzALYfSLmLNMrRIMVmosYuf1ipiYiNbxYzHcpXfVniBwCLy9ayRB4l6Sbth5o9LSrGxGRcNiXko1X1iF9KwDu8laO4i88GY+4XWuAeGUwVPRkJjzW2Bg27w4w78PZKT3bAmR1kzabuEN7QDJR4NnhSMxNOlCHOhSzMfg8+IFUJAqEK+ama28DqnGvPzPatWDIzHBqHlxPebkvX5iWHYK8UpilcPnoCxfUnz0FRyJ4Y6XpAJuKkNB9Fs9NOSZuBzDwb/2jAr2ffa0BU6TiuNruz8YjueMVNP1nFHBxSaO7IkcT2AR2ZQJrIPHPnRpTuKTMR+VmfTd3URe0+4mFTSmX0Y8feLk1p76jVu7mWghMcAHyEiJ+M7YY28AAAAASUVORK5CYII=" InformativeScreenshot="75fd0d1a06c4718a7bb786777df382ff.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Mobile Medical Unit- MMSSY' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                                             <uix:TargetAnchorable.Anchors>
