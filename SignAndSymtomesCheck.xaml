@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SignAndSymtomesCheck" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1240,4769" sap2010:WorkflowViewState.IdRef="SignAndSymtomesCheck_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SignAndSymtomesCheck" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1240,4811" sap2010:WorkflowViewState.IdRef="SignAndSymtomesCheck_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="76">
       <x:String>System.Activities</x:String>
@@ -77,21 +77,22 @@
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SignAndSymtomesCheck" sap:VirtualizedContainerService.HintSize="836,4704" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SignAndSymtomesCheck" sap:VirtualizedContainerService.HintSize="941,4746" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Mobile Medical Unit- MMSSY" sap:VirtualizedContainerService.HintSize="794,4612" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="81caa2d0-f294-4259-9930-3943eedb0d47" Version="V2">
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Mobile Medical Unit- MMSSY" sap:VirtualizedContainerService.HintSize="899,4654" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="81caa2d0-f294-4259-9930-3943eedb0d47" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="CheckSignAndSymtomes" sap:VirtualizedContainerService.HintSize="760,4396" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="CheckSignAndSymtomes" sap:VirtualizedContainerService.HintSize="865,4438" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="signAndSymtomes" />
               <Variable x:TypeArguments="sd:DataTable" Name="dt_Dignosis" />
@@ -101,7 +102,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NGetText DisplayName="Get Text 'Patient Signs'" sap:VirtualizedContainerService.HintSize="718,156" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="81caa2d0-f294-4259-9930-3943eedb0d47" Version="V1">
+            <uix:NGetText DisplayName="Get Text 'Patient Signs'" sap:VirtualizedContainerService.HintSize="823,156" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="81caa2d0-f294-4259-9930-3943eedb0d47" Version="V1">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="http://103.133.215.182:8080/MMUWeb/treatmentAudit/getOpdPatientMainData?visitId=241930&amp;visitStatus=com" DesignTimeRectangle="762, 356, 204, 88" FriendlyName="'COUGH and'" FullSelectorArgument="&lt;webctrl id='patientSympotnsId' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='patientSympotnsId' tag='DIV' type='' class='multiDiv' aaname='' /&gt;" Guid="06031188-7345-4a62-a4b8-79834818457b" InformativeScreenshot="e3fa5ec9bab72cf9d3f6a4fb32ae9450.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Mobile Medical Unit- MMSSY' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -115,31 +116,35 @@
                 <OutArgument x:TypeArguments="x:String">[signAndSymtomes]</OutArgument>
               </uix:NGetText.Text>
             </uix:NGetText>
-            <If Condition="[signAndSymtomes.Contains(&quot;Routine checkup&quot;)]" DisplayName="If Routine Checkup avavilable" sap:VirtualizedContainerService.HintSize="718,4106" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[signAndSymtomes.Contains(&quot;Routine checkup&quot;)]" DisplayName="If Routine Checkup avavilable" sap:VirtualizedContainerService.HintSize="823,4148" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Sequence DisplayName="Dignosis table Check " sap:VirtualizedContainerService.HintSize="682,3918" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence DisplayName="Dignosis table Check " sap:VirtualizedContainerService.HintSize="787,3960" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="dt_dignosis_text" />
                     <Variable x:TypeArguments="x:Int32" Name="Counter" />
                     <Variable x:TypeArguments="sd:DataTable" Name="dt_drugs" />
                     <Variable x:TypeArguments="x:String" Name="drugs_text" />
                     <Variable x:TypeArguments="x:String" Name="DiagnosisText" />
-                    <Variable x:TypeArguments="s:String[]" Default="[{&quot;&quot;}]" Name="drug_list" />
+                    <Variable x:TypeArguments="s:String[]" Name="drug_list">
+                      <Variable.Default>
+                        <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="{}{}" />
+                      </Variable.Default>
+                    </Variable>
                   </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="640,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Ready to go in  the dignosis level&quot;]" />
-                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dt_Dignosis]" DisplayName="Extract Dignosis Table" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Diagnosis' ReferenceIdx='0' Name='Diagnosis'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Mark as Communicable Disease' ReferenceIdx='1' Name='Mark as Communicable Disease'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Mark as Infectious Disease' ReferenceIdx='2' Name='Mark as Infectious Disease'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Action' ReferenceIdx='3' Name='Action'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Recommended Diagnosis' ReferenceIdx='4' Name='Recommended Diagnosis'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Remarks' ReferenceIdx='5' Name='Remarks'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Diagnosis' attr='text' /&gt;&lt;column name='Mark as Communicable Disease' attr='text' /&gt;&lt;column name='Mark as Infectious Disease' attr='text' /&gt;&lt;column name='Action' attr='text' /&gt;&lt;column name='Recommended Diagnosis' attr='text' /&gt;&lt;column name='Remarks' attr='text' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="640,156" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="81caa2d0-f294-4259-9930-3943eedb0d47" Version="V1">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="745,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Ready to go in  the dignosis level&quot;]" />
+                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dt_Dignosis]" DisplayName="Extract Dignosis Table" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Diagnosis' ReferenceIdx='0' Name='Diagnosis'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Mark as Communicable Disease' ReferenceIdx='1' Name='Mark as Communicable Disease'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Mark as Infectious Disease' ReferenceIdx='2' Name='Mark as Infectious Disease'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Action' ReferenceIdx='3' Name='Action'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Recommended Diagnosis' ReferenceIdx='4' Name='Recommended Diagnosis'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Remarks' ReferenceIdx='5' Name='Remarks'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Diagnosis' attr='text' /&gt;&lt;column name='Mark as Communicable Disease' attr='text' /&gt;&lt;column name='Mark as Infectious Disease' attr='text' /&gt;&lt;column name='Action' attr='text' /&gt;&lt;column name='Recommended Diagnosis' attr='text' /&gt;&lt;column name='Remarks' attr='text' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="745,156" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="81caa2d0-f294-4259-9930-3943eedb0d47" Version="V1">
                     <uix:NExtractData.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="294, 325, 1218, 243" FriendlyName="'Diagnosis Mark'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="20d4be1f-d325-4704-abad-f7591258dd87" InformativeScreenshot="3689dbffd89bd2285b0c2a5e3f317333.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Mobile Medical Unit- MMSSY' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                     </uix:NExtractData.Target>
                   </uix:NExtractData>
-                  <ui:OutputDataTable DataTable="[dt_Dignosis]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="640,79" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[dt_dignosis_text]" />
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="640,61" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[dt_Dignosis.RowCount.ToString]" />
-                  <Assign DisplayName="creating counter " sap:VirtualizedContainerService.HintSize="640,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+                  <ui:OutputDataTable DataTable="[dt_Dignosis]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="745,79" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[dt_dignosis_text]" />
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="745,61" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[dt_Dignosis.RowCount.ToString]" />
+                  <Assign DisplayName="creating counter " sap:VirtualizedContainerService.HintSize="745,61" sap2010:WorkflowViewState.IdRef="Assign_1">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Int32">[Counter]</OutArgument>
                     </Assign.To>
@@ -147,7 +152,7 @@
                       <InArgument x:TypeArguments="x:Int32">2</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[Counter&lt;=dt_Dignosis.RowCount+1]" DisplayName="while Incrementing Dignosis Counter" sap:VirtualizedContainerService.HintSize="640,745" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                  <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[Counter&lt;=dt_Dignosis.RowCount+1]" DisplayName="while Incrementing Dignosis Counter" sap:VirtualizedContainerService.HintSize="745,745" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
                     <ui:InterruptibleWhile.Body>
                       <Sequence DisplayName="body of while incrementing" sap:VirtualizedContainerService.HintSize="376,580" sap2010:WorkflowViewState.IdRef="Sequence_6">
                         <sap:WorkflowViewStateService.ViewState>
@@ -182,7 +187,7 @@
                       </Sequence>
                     </ui:InterruptibleWhile.Body>
                   </ui:InterruptibleWhile>
-                  <If Condition="[DiagnosisText.Contains(&quot;ROUTINE CHECKUP&quot;)]" DisplayName="checking for drug " sap:VirtualizedContainerService.HintSize="640,2391" sap2010:WorkflowViewState.IdRef="If_2">
+                  <If Condition="[DiagnosisText.Contains(&quot;ROUTINE CHECKUP&quot;)]" DisplayName="checking for drug " sap:VirtualizedContainerService.HintSize="745,2433" sap2010:WorkflowViewState.IdRef="If_2">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -190,7 +195,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <If.Then>
-                      <Sequence DisplayName="Drug's Sequence" sap:VirtualizedContainerService.HintSize="604,2203" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <Sequence DisplayName="Drug's Sequence" sap:VirtualizedContainerService.HintSize="709,2245" sap2010:WorkflowViewState.IdRef="Sequence_7">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="sd:DataTable" Name="dt_routineCheckupMedicine" />
                           <Variable x:TypeArguments="x:String" Name="routineCheckupMedicineList" />
@@ -200,14 +205,14 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dt_drugs]" DisplayName="Extract Drug's form website" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Drug Name' ReferenceIdx='0' Name='Drug Name'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Disp Unit' ReferenceIdx='1' Name='Disp Unit'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Dosage' ReferenceIdx='2' Name='Dosage'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Frequency' ReferenceIdx='3' Name='Frequency'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Days' ReferenceIdx='4' Name='Days'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Total' ReferenceIdx='5' Name='Total'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Instruction' ReferenceIdx='6' Name='Instruction'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Action' ReferenceIdx='7' Name='Action'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Recommended Treatment' ReferenceIdx='8' Name='Recommended Treatment'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Remarks' ReferenceIdx='9' Name='Remarks'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Drug Name' attr='text' /&gt;&lt;column name='Disp Unit' attr='text' /&gt;&lt;column name='Dosage' attr='text' /&gt;&lt;column name='Frequency' attr='text' /&gt;&lt;column name='Days' attr='text' /&gt;&lt;column name='Total' attr='text' /&gt;&lt;column name='Instruction' attr='text' /&gt;&lt;column name='Action' attr='text' /&gt;&lt;column name='Recommended Treatment' attr='text' /&gt;&lt;column name='Remarks' attr='text' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="562,156" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="81caa2d0-f294-4259-9930-3943eedb0d47" Version="V1">
+                        <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dt_drugs]" DisplayName="Extract Drug's form website" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Drug Name' ReferenceIdx='0' Name='Drug Name'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Disp Unit' ReferenceIdx='1' Name='Disp Unit'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Dosage' ReferenceIdx='2' Name='Dosage'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Frequency' ReferenceIdx='3' Name='Frequency'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Days' ReferenceIdx='4' Name='Days'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Total' ReferenceIdx='5' Name='Total'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Instruction' ReferenceIdx='6' Name='Instruction'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Action' ReferenceIdx='7' Name='Action'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Recommended Treatment' ReferenceIdx='8' Name='Recommended Treatment'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Remarks' ReferenceIdx='9' Name='Remarks'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Drug Name' attr='text' /&gt;&lt;column name='Disp Unit' attr='text' /&gt;&lt;column name='Dosage' attr='text' /&gt;&lt;column name='Frequency' attr='text' /&gt;&lt;column name='Days' attr='text' /&gt;&lt;column name='Total' attr='text' /&gt;&lt;column name='Instruction' attr='text' /&gt;&lt;column name='Action' attr='text' /&gt;&lt;column name='Recommended Treatment' attr='text' /&gt;&lt;column name='Remarks' attr='text' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="667,156" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="81caa2d0-f294-4259-9930-3943eedb0d47" Version="V1">
                           <uix:NExtractData.Target>
                             <uix:TargetAnchorable DesignTimeRectangle="294, 427, 1759, 126" FriendlyName="'Drug Name'" FullSelectorArgument="&lt;webctrl parentid='newpost7' tag='TABLE' /&gt;" Guid="ffb6a042-89d9-41a5-92c6-841240637ac9" InformativeScreenshot="1ef2b98123e441306140f8e23e93571f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Mobile Medical Unit- MMSSY' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                           </uix:NExtractData.Target>
                         </uix:NExtractData>
-                        <ui:OutputDataTable DataTable="[dt_drugs]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="562,79" sap2010:WorkflowViewState.IdRef="OutputDataTable_2" Text="[drugs_text]" />
-                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="562,61" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[&quot;Drugs=&gt;&quot;+dt_drugs.RowCount.ToString]" />
-                        <Assign sap:VirtualizedContainerService.HintSize="562,61" sap2010:WorkflowViewState.IdRef="Assign_3">
+                        <ui:OutputDataTable DataTable="[dt_drugs]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="667,79" sap2010:WorkflowViewState.IdRef="OutputDataTable_2" Text="[drugs_text]" />
+                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="667,61" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[&quot;Drugs=&gt;&quot;+dt_drugs.RowCount.ToString]" />
+                        <Assign sap:VirtualizedContainerService.HintSize="667,61" sap2010:WorkflowViewState.IdRef="Assign_3">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Int32">[Counter]</OutArgument>
                           </Assign.To>
@@ -215,7 +220,7 @@
                             <InArgument x:TypeArguments="x:Int32">2</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[Counter&lt;=dt_drugs.RowCount+1]" DisplayName="While for extracting drugs" sap:VirtualizedContainerService.HintSize="562,714" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+                        <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[Counter&lt;=dt_drugs.RowCount+1]" DisplayName="While for extracting drugs" sap:VirtualizedContainerService.HintSize="667,714" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
                           <ui:InterruptibleWhile.Body>
                             <Sequence DisplayName="Body drug count while loop" sap:VirtualizedContainerService.HintSize="376,549" sap2010:WorkflowViewState.IdRef="Sequence_10">
                               <Sequence.Variables>
@@ -260,44 +265,46 @@
                             </Sequence>
                           </ui:InterruptibleWhile.Body>
                         </ui:InterruptibleWhile>
-                        <ui:ReadRange AddHeaders="True" DataTable="[dt_routineCheckupMedicine]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="562,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Routine Checkup" WorkbookPath="C:\Users\admin\Downloads\MMU NEW EDL &amp; Dhanvantari EDL _July 2022.xlsx">
+                        <ui:ReadRange AddHeaders="True" DataTable="[dt_routineCheckupMedicine]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="667,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Routine Checkup" WorkbookPath="C:\Users\admin\Downloads\MMU NEW EDL &amp; Dhanvantari EDL _July 2022.xlsx">
                           <ui:ReadRange.Range>
                             <InArgument x:TypeArguments="x:String">
                               <Literal x:TypeArguments="x:String" Value="" />
                             </InArgument>
                           </ui:ReadRange.Range>
                         </ui:ReadRange>
-                        <ui:OutputDataTable DataTable="[dt_routineCheckupMedicine]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="562,79" sap2010:WorkflowViewState.IdRef="OutputDataTable_3" Text="[routineCheckupMedicineList]" />
-                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="562,61" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[routineCheckupMedicineList]" />
-                        <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="562,491" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[drug_list]">
+                        <ui:OutputDataTable DataTable="[dt_routineCheckupMedicine]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="667,79" sap2010:WorkflowViewState.IdRef="OutputDataTable_3" Text="[routineCheckupMedicineList]" />
+                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="667,61" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[routineCheckupMedicineList]" />
+                        <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="667,533" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[drug_list]">
                           <ui:ForEach.Body>
                             <ActivityAction x:TypeArguments="x:Object">
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
                               </ActivityAction.Argument>
-                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,366" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="631,408" sap2010:WorkflowViewState.IdRef="Sequence_13">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <If Condition="[routineCheckupMedicineList.Contains(item.ToString)]" sap:VirtualizedContainerService.HintSize="484,272" sap2010:WorkflowViewState.IdRef="If_3">
+                                <If Condition="[routineCheckupMedicineList.Contains(item.ToString)]" sap:VirtualizedContainerService.HintSize="589,314" sap2010:WorkflowViewState.IdRef="If_3">
                                   <If.Then>
-                                    <Sequence sap:VirtualizedContainerService.HintSize="200,84" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                    <Sequence sap:VirtualizedContainerService.HintSize="272,155" sap2010:WorkflowViewState.IdRef="Sequence_11">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
+                                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="Medicine is given to patient" />
                                     </Sequence>
                                   </If.Then>
                                   <If.Else>
-                                    <Sequence sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                    <Sequence sap:VirtualizedContainerService.HintSize="272,155" sap2010:WorkflowViewState.IdRef="Sequence_12">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
+                                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="Medicine is not given to patient" />
                                     </Sequence>
                                   </If.Else>
                                 </If>
